@@ -2,6 +2,9 @@ const defaultLength = parseInt(document.getElementById("stringLength").value);
 document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("stringLength").focus();
       gen_pass(defaultLength);
+      const passField = document.getElementById("genPass");
+      passField.select();
+      document.execCommand("copy");
     });
 
 function gen_pass(length) {
@@ -32,7 +35,6 @@ document.getElementById("generate").addEventListener("click", function() {
 document.getElementById("copy").addEventListener("click", function() {
     const passField = document.getElementById("genPass");
     passField.select();
-    // passField.setSelectionRange(0, 99999); // For mobile devices
     document.execCommand("copy");
 });
 
