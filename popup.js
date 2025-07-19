@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function gen_pass(length) {
   const letters = "ABCDEFGHJKLMNOPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
   const numbers = "0123456789";
-  const specials = "!@#$%&*+=?";
+  const specials = "!@#$%&+=?";
   let pass = [
     letters[Math.floor(Math.random() * letters.length)],
     numbers[Math.floor(Math.random() * numbers.length)],
